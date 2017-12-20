@@ -1,0 +1,18 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title text-center >moofenderslist</ion-title>
+  </ion-navbar>
+
+
+</ion-header>
+
+
+<ion-content>
+  <ion-tabs tabsPlacement="top" tabsHighlight="true">
+              <ion-tab [root]="tab1" tabTitle="list" tabBadge="3" tabBadgeStyle="danger"></ion-tab>
+                  <ion-tab [root]="tab2" tabTitle="checking"></ion-tab>
+
+                    <ion-tab  show="false" [root]="tab1" tabTitle="list" tabBadge="3" tabBadgeStyle="danger"></ion-tab>
+  </ion-tabs>
+</ion-content>
