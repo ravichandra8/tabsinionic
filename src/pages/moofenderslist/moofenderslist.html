@@ -7,5 +7,30 @@
 
 
 <ion-content padding>
-list page
+
+
+
+    <ion-card *ngFor="let zone of ZonesData">
+  <ion-item >
+  <ion-thumbnail item-start>
+    <img [src]="zone.FULLIMAGE">
+  </ion-thumbnail>
+  <h2>  {{zone.OFFENDERNAME | uppercase}}</h2>
+  <p> {{zone.AGE}}</p>
+
+</ion-item>
+<ion-row>
+  <ion-col text-right>
+  <button  ion-button clear item-end small
+  [navPush]="mooffenderdeatils"
+  [navParams]="zone">View</button>
+</ion-col>
+</ion-row>
+
+
+</ion-card>
+<ion-infinite-scroll (ionInfinite)="doInfinite($event)" *ngIf="i < noofpages">
+<ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading data...Please wait"></ion-infinite-scroll-content>
+</ion-infinite-scroll>
+
 </ion-content>

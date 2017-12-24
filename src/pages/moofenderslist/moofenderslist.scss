@@ -1,3 +1,11 @@
 page-moofenderslist {
 
 }
+
+.scroll-content {
+    padding: 10px;
+
+}
+ion-app.md [padding] .scroll-content {
+    padding: 5px;
+}
